@@ -1,15 +1,14 @@
 /**
- * Object 타입
- * 1. Map
- *  키:밸류의 쌍으로 이루어져있다.
- *  key:value
- *
- * 2. Array
- *  값을 배열로 나열 할 수 있는 타입이다.
- *
- * 3. Function
+ * Basic data type
+ * String, number, boolen, null, undefined
  */
 
+/**
+ * Object type
+ * Map, Array, Function
+ */
+
+//1. Map
 const dic = {
   one: 1,
   two: 2,
@@ -17,9 +16,37 @@ const dic = {
 console.log(dic); //{ one: 1, two: 2 }
 console.log(dic["one"]); // 1
 
+// 2. Array
 const numArray = [1, 2, 3, 4, 5];
 console.log(numArray); //[ 1, 2, 3, 4, 5 ]
 console.log(numArray[2]); // 3
+
+// 3. Function
+function calculate(number) {
+  console.log((number * 10 - number / 10).toString());
+}
+
+calculate(5); //49.5
+
+//함수 파라미터 default 값 설정
+function multiply(x, y = 10) {
+  return x * y;
+}
+
+const result1 = multiply(3, 4); //12
+const result2 = multiply(2); //20
+
+// ... 을 사용하면 함수에 몇개의 파라미터가 들어올지 모를 때 나머지 인자들을 배열로 받아줍니다.
+const multiplyAll = function (...arguments) {
+  return arguments.reduce((acc, cur) => acc * cur, 1);
+};
+
+console.log(multiplyAll(1, 2, 3, 4)); //24
+
+// immediately invoked function
+(function (x, y) {
+  console.log(x * y);
+})(3, 4);
 
 /**
  * static typing -> 변수를 선언할떄 어떤 타입의 변수를 선언할지 명시를한다. = C
