@@ -5,7 +5,7 @@
 
 /**
  * Object type
- * Map, Array, Function
+ * Map, Array, Function, RegexExp
  */
 
 //1. Map
