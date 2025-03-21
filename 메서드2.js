@@ -18,7 +18,7 @@ arr1.forEach((item) => {
 console.log(doubledArr);
 
 // 2. includes
-// 배ㅕㅇㄹ에 특정 요소가 있는지 확인하는 그런 메서드
+// 배열에 특정 요소가 있는지 확인하는 그런 메서드
 let arr2 = [1, 2, 3];
 let isInclude = arr2.includes(3);
 console.log(isInclude);
